@@ -1,7 +1,7 @@
 import React from 'react'
 import '../assets/css/home.css';
 import { useSelector, useDispatch } from "react-redux";
-import { FaTrophy } from 'react-icons/fa';
+import { FaTrophy, FaCanadianMapleLeaf } from 'react-icons/fa';
 import { GiLaurelsTrophy, GiDiamondTrophy} from 'react-icons/gi';
 
 function Totalscore() {
@@ -23,9 +23,9 @@ function Totalscore() {
             <ul class="item1">
                 <li style={{color:"#97bbfe"}}>Total Score</li>
                 {result.map((player,idx) => {
-                    return <li className={ idx == 0 ? 'golden' : idx == 1 ? 'silver' : idx == 2 ? 'bronze' : ''}>
+                    return <li className={ idx == 0 ? 'golden' : idx == 1 ? '' : idx == 2 ? '' : (idx == result.length-1 || idx == result.length-2) ? 'green': ''}>
                         {idx+1}{' '}&nbsp;&nbsp;{`${player.nameOfPlayer} : ${player.totalScore!=undefined ? player.totalScore: 0}(${player.lastRoundScore != undefined ? player.lastRoundScore : 0})`}
-                          &nbsp;&nbsp;&nbsp;{ idx == 0 ? <GiDiamondTrophy/> : idx == 1 ? <GiLaurelsTrophy/> : idx == 2 ? <FaTrophy/> : ''}
+                          &nbsp;&nbsp;&nbsp;{ idx == 0 ? <GiDiamondTrophy/> : (idx == 1 ? <GiLaurelsTrophy/> : (idx == 2 ? <FaTrophy/> : ((idx == result.length-1 || idx == result.length-2) ? <FaCanadianMapleLeaf/> :'')))}
                         </li>
                 })
                 }

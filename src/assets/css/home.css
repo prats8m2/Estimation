@@ -330,6 +330,10 @@ ul li:first-child {
   /* font-size: 16px; */
 }
 
+.green{
+  color: #7cd57c;
+}
+
 
 .golden-icon{
   color: gold;
