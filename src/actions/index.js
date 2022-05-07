@@ -5,36 +5,43 @@ import {
   FINAL,
   TOTAL,
   MAX,
-  NEXT} from '../constants'
-
+  NEXT,
+} from "../constants";
 
 export function saveNumberOfPlayer(payload) {
-    return { type: SAVE_NUMBER_PLAYER, payload }
-  };
-
+  return { type: SAVE_NUMBER_PLAYER, payload };
+}
 
 export function saveNameOfPlayer(payload) {
-    return { type: SAVE_NAME_PLAYER, payload }
-};
+  return { type: SAVE_NAME_PLAYER, payload };
+}
 
 export function callPlayerHand(call, idx) {
-  console.log(call)
-  return { type: CALL, payload:{'call': call, 'idx': idx} }
-};
+  console.log(call);
+  return { type: CALL, payload: { call: call, idx: idx } };
+}
 
 export function finalPlayerHand(final, idx) {
-  return { type: FINAL, payload:{'final': final, 'idx': idx} }
-};
+  return { type: FINAL, payload: { final: final, idx: idx } };
+}
 
 export function totalScore(payload) {
-  return { type: TOTAL, payload }
-};
+  return { type: TOTAL, payload };
+}
 
-export function nextRound(newRound,numberOfPlayer, roundScore, newTotalScore ) {
-  return { type: NEXT, payload :{newRound,numberOfPlayer, roundScore, newTotalScore} }
-};
-
+export function nextRound(
+  newRound,
+  numberOfPlayer,
+  roundScore,
+  newTotalScore,
+  graphData
+) {
+  return {
+    type: NEXT,
+    payload: { newRound, numberOfPlayer, roundScore, newTotalScore, graphData },
+  };
+}
 
 export function setMaxHands(payload) {
-  return { type: MAX, payload }
-};
+  return { type: MAX, payload };
+}
