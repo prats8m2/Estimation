@@ -105,7 +105,7 @@ export default function Playgroud() {
         </Col>
 
         <Col xs={12} md={8}>
-          <h1 className="title">Estimation </h1>
+          <h1 className="title">Estimate </h1>
         </Col>
         <Col xs={12} md={2}>
           <h1 className="hands">Hands {numberOfHands}</h1>
