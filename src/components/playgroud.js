@@ -129,7 +129,7 @@ export default function Playgroud() {
           </center>
         </Col>
       </Row>
-      <Row style={{ marginLeft: "8%", marginTop: "4%", opacity: "0.6" }}>
+      <Row style={{ marginLeft: "2%", marginTop: "4%" }}>
         <Col>
           <center>
             <Chart
