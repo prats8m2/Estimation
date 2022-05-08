@@ -124,7 +124,7 @@ export default function Playgroud() {
         <Col>
           <center>
             <span className="nextRound" onClick={() => nextRoundCall()}>
-              {round != maxRound ? `Next Round` : `Final Result`}
+              {round != maxRound ? `Round ${round}` : `Final Result`}
             </span>
           </center>
         </Col>
