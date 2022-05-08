@@ -40,10 +40,10 @@ export default function Playgroud() {
       const callHand = call[idx];
       const finalHand = final[idx];
 
-      if (callHand == finalHand) {
+      if (callHand === finalHand) {
         score = parseInt(numberOfHands) + callHand;
       } else {
-        if (callHand == 0) {
+        if (callHand === 0) {
           score = 0 - finalHand;
         } else if (callHand > finalHand) {
           score = callHand - (callHand - finalHand);
@@ -80,7 +80,7 @@ export default function Playgroud() {
   };
 
   const nextRoundCall = () => {
-    if (round == 1) {
+    if (round === 1) {
       graphData.push(["Round", ...nameOfPlayers]);
     }
 
@@ -124,7 +124,7 @@ export default function Playgroud() {
         <Col>
           <center>
             <span className="nextRound" onClick={() => nextRoundCall()}>
-              {round != maxRound ? `Round ${round}` : `Final Result`}
+              {round !== maxRound ? `Round ${round}` : `Final Result`}
             </span>
           </center>
         </Col>

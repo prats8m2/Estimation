@@ -1,4 +1,5 @@
-import { CALL, FINAL, TOTAL, NEXT, MAX } from "../constants";
+/* eslint-disable eqeqeq */
+import { CALL, FINAL, NEXT, MAX } from "../constants";
 import arrayRotate from "../helpers";
 
 const initialState = {
@@ -28,7 +29,6 @@ const score = (state = initialState, action) => {
           call: [...state.call, parseInt(action.payload.call)],
         };
       }
-      break;
 
     case FINAL:
       if (state.final[action.payload.idx] != undefined) {

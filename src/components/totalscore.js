@@ -1,6 +1,7 @@
+/* eslint-disable eqeqeq */
 import React from "react";
 import "../assets/css/home.css";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { FaTrophy, FaCanadianMapleLeaf } from "react-icons/fa";
 import { GiLaurelsTrophy, GiDiamondTrophy } from "react-icons/gi";
 
